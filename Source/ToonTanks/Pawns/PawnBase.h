@@ -29,10 +29,10 @@ public:
 
 protected:
 
-	void RotateTurretFunction(FVector LookAtTarget);
+	void RotateTurret(FVector LookAtTarget);
 
 	void Fire();
 
-	void HandleDestruction();
+	virtual void HandleDestruction();
 
 };
