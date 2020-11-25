@@ -21,6 +21,7 @@ void APawnTank::BeginPlay()
 	Super::BeginPlay();
 	
 }
+
 // Called every frame
 void APawnTank::Tick(float DeltaTime)
 {
@@ -31,5 +32,12 @@ void APawnTank::Tick(float DeltaTime)
 void APawnTank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+    PlayerInputComponent->BindAxis("MoveForward", this, &APawnTank::CalculateMoveInput);
+    PlayerInputComponent->BindAxis("Turn", this, &APawnTank::CalculateRotateInput);
 
+}
+
+void APawnTank::CalculateMoveInput(float Value) 
+{
+    
 }
